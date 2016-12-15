@@ -2,20 +2,45 @@
 <html>
 
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title> Science Bowl Emulator </title>
+
+	<link rel="stylesheet" href="/static/css/bootstrap.min.css"> 
 </head>
 
 <body>
 
+	<!-- set up audio -->	
 	<audio id="high_beep" src="/static/sounds/high_beep.mp3"></audio>
 	<audio id="low_beep" src="/static/sounds/low_beep.mp3"></audio>
 
+	<!-- load jQuery, load science bowl game -->
 	<script type="text/javascript" src="/static/js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="/static/js/game.js"></script>
 
-	<div id="disp_user">
-		<h1 id="current"></h1>
+	<!-- displays the currently selected player -->
+	<div id="disp_player">
+		<h1 id="current" align="center" style="font-size:512px"><br /></h1>
 	</div>
+
+	<!-- displays the other players buzzers, highlights currently selected team -->
+	<div id="disp_team">
+		<table align="center">
+			<tr align="center">
+				<td><img id="teamAindicator" src="/static/imgs/teamA.png" style="width:75%;height:25px;opacity:0.3;"></img></td>
+				<td><img id="teamBindicator" src="/static/imgs/teamB.png" style="width:75%;height:25px;opacity:0.3"></img></td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- footer -->
+	<hr />
+	<footer class="dark-bg light-typo">
+		<p align="center">&copy; Matthew Feng 2016</p>
+	</footer>
+
 </body>
 
 </html>
